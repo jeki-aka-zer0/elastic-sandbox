@@ -1,0 +1,8 @@
+# Create a record
+PUT http://localhost:9200/persons/_doc/1
+Content-Type: application/json
+
+{
+  "first_name": "{{first_name}}",
+  "last_name": "{{last_name}}"
+}
