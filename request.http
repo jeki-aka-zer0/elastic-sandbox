@@ -1,4 +1,5 @@
 # Create a record
+# If the command is run multiply times, the record will be updated and the field _version will be incremented
 PUT http://localhost:9200/persons/_doc/1
 Content-Type: application/json
 
