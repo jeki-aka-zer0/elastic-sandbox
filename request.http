@@ -11,6 +11,9 @@ Content-Type: application/json
       },
       "last_name": {
         "type": "text"
+      },
+      "age": {
+        "type": "integer"
       }
     }
   }
@@ -24,7 +27,8 @@ Content-Type: application/json
 
 {
   "first_name": "{{first_name}}",
-  "last_name": "{{last_name}}"
+  "last_name": "{{last_name}}",
+  "age": {{age}}
 }
 
 ###
@@ -35,7 +39,8 @@ Content-Type: application/json
 
 {
   "first_name": "{{first_name}}",
-  "last_name": "{{last_name}}"
+  "last_name": "{{last_name}}",
+  "age": {{age}}
 }
 
 ###
@@ -51,4 +56,4 @@ Content-Type: application/json
 ###
 #@name Get all
 GET http://localhost:9200/persons/_search
-Content-Type: application/json
+
