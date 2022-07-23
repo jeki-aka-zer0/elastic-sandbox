@@ -1,5 +1,5 @@
 ###
-# Create index
+#@name Create index
 PUT http://localhost:9200/persons
 Content-Type: application/json
 
@@ -17,7 +17,7 @@ Content-Type: application/json
 }
 
 ###
-# Upsert (update or insert) a record
+#@name Upsert (update or insert)
 # If the command is run multiply times, the record will be updated and the field _version will be incremented
 PUT http://localhost:9200/persons/_doc/{{id}}
 Content-Type: application/json
@@ -28,7 +28,7 @@ Content-Type: application/json
 }
 
 ###
-# Create a record
+#@name Create
 # If it is already exists, the 409 Conflict error will be thrown
 PUT http://localhost:9200/persons/_create/{{id}}
 Content-Type: application/json
@@ -39,16 +39,16 @@ Content-Type: application/json
 }
 
 ###
-# Get a record
+#@name Get
 GET http://localhost:9200/persons/_doc/{{id}}
 Content-Type: application/json
 
 ###
-# Delete a record
+#@name Delete
 DELETE http://localhost:9200/persons/_doc/{{id}}
 Content-Type: application/json
 
 ###
-# Get all the records
+#@name Get all
 GET http://localhost:9200/persons/_search
 Content-Type: application/json
