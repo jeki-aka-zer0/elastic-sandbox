@@ -19,3 +19,9 @@ Content-Type: application/json
   "first_name": "{{first_name}}",
   "last_name": "{{last_name}}"
 }
+
+###
+# Get a record.
+GET http://localhost:9200/persons/_doc/{{id}}
+Content-Type: application/json
+
