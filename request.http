@@ -10,7 +10,7 @@ Content-Type: application/json
 }
 
 ###
-# Create a record.
+# Create a record
 # If it is already exists, the 409 Conflict error will be thrown
 PUT http://localhost:9200/persons/_create/{{id}}
 Content-Type: application/json
@@ -21,11 +21,16 @@ Content-Type: application/json
 }
 
 ###
-# Get a record.
+# Get a record
 GET http://localhost:9200/persons/_doc/{{id}}
 Content-Type: application/json
 
 ###
-# Delete a record.
+# Delete a record
 DELETE http://localhost:9200/persons/_doc/{{id}}
+Content-Type: application/json
+
+###
+# Get all the records
+GET http://localhost:9200/persons/_search
 Content-Type: application/json
