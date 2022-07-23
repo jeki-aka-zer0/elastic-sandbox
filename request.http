@@ -1,4 +1,22 @@
 ###
+# Create index
+PUT http://localhost:9200/persons
+Content-Type: application/json
+
+{
+  "mappings": {
+    "properties": {
+      "first_name": {
+        "type": "text"
+      },
+      "last_name": {
+        "type": "text"
+      }
+    }
+  }
+}
+
+###
 # Upsert (update or insert) a record
 # If the command is run multiply times, the record will be updated and the field _version will be incremented
 PUT http://localhost:9200/persons/_doc/{{id}}
