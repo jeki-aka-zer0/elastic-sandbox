@@ -79,9 +79,24 @@ Content-Type: application/json
   "query": {
     "bool": {
       "must": [
-        {"match": {"first_name": "John"}},
-        {"match": {"last_name": "Doe"}}
+        {"match": {"first_name": "{{first_name}}"}},
+        {"match": {"last_name": "{{last_name}}"}}
       ]
+    }
+  }
+}
+
+###
+#@name Search by first and last names
+GET http://localhost:9200/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "fuzzy": {
+      "first_name": {
+        "value": "{{first_name}}"
+      }
     }
   }
 }
