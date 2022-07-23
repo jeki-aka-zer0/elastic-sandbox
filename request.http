@@ -57,3 +57,15 @@ Content-Type: application/json
 #@name Get all
 GET http://localhost:9200/persons/_search
 
+###
+#@name Search by name
+GET http://localhost:9200/persons/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "match": {
+      "first_name": "{{first_name}}"
+    }
+  }
+}
