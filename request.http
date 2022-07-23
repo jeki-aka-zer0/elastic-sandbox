@@ -55,17 +55,33 @@ Content-Type: application/json
 
 ###
 #@name Get all
-GET http://localhost:9200/persons/_search
+GET http://localhost:9200/_search
 
 ###
 #@name Search by name
-GET http://localhost:9200/persons/_search
+GET http://localhost:9200/_search
 Content-Type: application/json
 
 {
   "query": {
     "match": {
       "first_name": "{{first_name}}"
+    }
+  }
+}
+
+###
+#@name Search by first and last names
+GET http://localhost:9200/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "bool": {
+      "must": [
+        {"match": {"first_name": "John"}},
+        {"match": {"last_name": "Doe"}}
+      ]
     }
   }
 }
