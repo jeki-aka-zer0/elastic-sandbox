@@ -1,6 +1,18 @@
-# Create a record
+###
+# Upsert (update or insert) a record
 # If the command is run multiply times, the record will be updated and the field _version will be incremented
-PUT http://localhost:9200/persons/_doc/1
+PUT http://localhost:9200/persons/_doc/{{id}}
+Content-Type: application/json
+
+{
+  "first_name": "{{first_name}}",
+  "last_name": "{{last_name}}"
+}
+
+###
+# Create a record.
+# If it is already exists, the 409 Conflict error will be thrown
+PUT http://localhost:9200/persons/_create/{{id}}
 Content-Type: application/json
 
 {
