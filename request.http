@@ -25,3 +25,7 @@ Content-Type: application/json
 GET http://localhost:9200/persons/_doc/{{id}}
 Content-Type: application/json
 
+###
+# Delete a record.
+DELETE http://localhost:9200/persons/_doc/{{id}}
+Content-Type: application/json
