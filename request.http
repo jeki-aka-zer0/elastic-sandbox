@@ -58,7 +58,7 @@ Content-Type: application/json
 GET http://localhost:9200/_search
 
 ###
-#@name Search by name
+#@name Search by first name
 GET http://localhost:9200/_search
 Content-Type: application/json
 
@@ -87,7 +87,23 @@ Content-Type: application/json
 }
 
 ###
-#@name Search by first and last names
+#@name Search by age
+GET http://localhost:9200/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "range": {
+      "age": {
+        "gte": 30,
+        "lte": 40
+      }
+    }
+  }
+}
+
+###
+#@name Search by first name
 GET http://localhost:9200/_search
 Content-Type: application/json
 
