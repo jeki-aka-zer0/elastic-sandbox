@@ -62,24 +62,24 @@ Content-Type: application/json
 
 ###
 #@name Get all
-GET http://localhost:9200/_search
+GET http://localhost:9200/persons/_search
 
 ###
-#@name Search by first name
-GET http://localhost:9200/_search
+#@name Search persons whose first name contains {{first_name}} or Martin
+GET http://localhost:9200/persons/_search
 Content-Type: application/json
 
 {
   "query": {
     "match": {
-      "first_name": "{{first_name}}"
+      "first_name": "{{first_name}} Martin"
     }
   }
 }
 
 ###
 #@name Search by first and last names
-GET http://localhost:9200/_search
+GET http://localhost:9200/persons/_search
 Content-Type: application/json
 
 {
@@ -95,7 +95,7 @@ Content-Type: application/json
 
 ###
 #@name Search by age
-GET http://localhost:9200/_search
+GET http://localhost:9200/persons/_search
 Content-Type: application/json
 
 {
@@ -111,7 +111,7 @@ Content-Type: application/json
 
 ###
 #@name Search by first name
-GET http://localhost:9200/_search
+GET http://localhost:9200/persons/_search
 Content-Type: application/json
 
 {
