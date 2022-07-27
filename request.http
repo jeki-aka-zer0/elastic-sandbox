@@ -88,6 +88,9 @@ Content-Type: application/json
       "must": [
         {"match": {"first_name": "{{first_name}}"}},
         {"match": {"last_name": "{{last_name}}"}}
+      ],
+      "must_not": [
+        {"match": {"age": 15}}
       ]
     }
   }
