@@ -14,6 +14,9 @@ Content-Type: application/json
       },
       "age": {
         "type": "integer"
+      },
+      "job": {
+        "type": "keyword"
       }
     }
   }
@@ -35,7 +38,8 @@ Content-Type: application/json
 {
   "first_name": "{{first_name}}",
   "last_name": "{{last_name}}",
-  "age": {{age}}
+  "age": {{age}},
+  "job": "{{job}}"
 }
 
 ###
@@ -47,7 +51,8 @@ Content-Type: application/json
 {
   "first_name": "{{first_name}}",
   "last_name": "{{last_name}}",
-  "age": {{age}}
+  "age": {{age}},
+  "job": "{{job}}"
 }
 
 ###
@@ -122,6 +127,24 @@ Content-Type: application/json
     "fuzzy": {
       "first_name": {
         "value": "{{first_name}}"
+      }
+    }
+  }
+}
+
+###
+#@name Group by job
+GET http://localhost:9200/persons/_search
+Content-Type: application/json
+
+{
+  "aggs": {
+    "jobs": {
+      "terms": {
+        "field": "job",
+        "size": 2,
+        "order": { "_key": "asc" },
+        "min_doc_count": 2
       }
     }
   }
