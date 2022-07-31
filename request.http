@@ -171,6 +171,21 @@ Content-Type: application/json
 }
 
 ###
+#@name Search by wildcard
+GET http://localhost:9200/persons/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "wildcard": {
+      "description": {
+        "value": "soft*"
+      }
+    }
+  }
+}
+
+###
 #@name Group by job
 GET http://localhost:9200/persons/_search
 Content-Type: application/json
