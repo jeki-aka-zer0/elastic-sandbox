@@ -155,6 +155,22 @@ Content-Type: application/json
 }
 
 ###
+#@name Search by prefix
+GET http://localhost:9200/persons/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "prefix": {
+      "job": {
+        "value": "scient",
+        "case_insensitive": false
+      }
+    }
+  }
+}
+
+###
 #@name Group by job
 GET http://localhost:9200/persons/_search
 Content-Type: application/json
