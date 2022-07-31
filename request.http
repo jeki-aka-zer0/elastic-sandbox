@@ -17,6 +17,9 @@ Content-Type: application/json
       },
       "job": {
         "type": "keyword"
+      },
+      "description": {
+        "type": "text"
       }
     }
   }
@@ -39,7 +42,8 @@ Content-Type: application/json
   "first_name": "{{first_name}}",
   "last_name": "{{last_name}}",
   "age": {{age}},
-  "job": "{{job}}"
+  "job": "{{job}}",
+  "description": "{{description}}"
 }
 
 ###
@@ -52,7 +56,8 @@ Content-Type: application/json
   "first_name": "{{first_name}}",
   "last_name": "{{last_name}}",
   "age": {{age}},
-  "job": "{{job}}"
+  "job": "{{job}}",
+  "description": "{{description}}"
 }
 
 ###
@@ -128,6 +133,22 @@ Content-Type: application/json
       "job": {
         "value": "engener",
         "fuzziness": "2"
+      }
+    }
+  }
+}
+
+###
+#@name Search by regexp. Find all the americans
+GET http://localhost:9200/persons/_search
+Content-Type: application/json
+
+{
+  "query": {
+    "regexp": {
+      "description": {
+        "value": ".*american.*",
+        "case_insensitive": true
       }
     }
   }

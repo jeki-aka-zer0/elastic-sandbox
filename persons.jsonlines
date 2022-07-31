@@ -1,10 +1,10 @@
 {"index":{"_id":100}}
-{"first_name":"Barbara","last_name":"Liskov","age":82,"job":"scientist"}
+{"first_name":"Barbara","last_name":"Liskov","age":82,"job":"scientist","description":"An American computer scientist who has made pioneering contributions to programming languages and distributed computing."}
 {"index":{"_id":101}}
-{"first_name":"Linus","last_name":"Torvalds","age":52,"job":"engineer"}
+{"first_name":"Linus","last_name":"Torvalds","age":52,"job":"engineer","description":"A Finnish software engineer who is the creator and, historically, the main developer of the Linux kernel, used by Linux distributions and other operating systems such as Android. He also created the distributed version control system Git."}
 {"index":{"_id":102}}
-{"first_name":"Robert","last_name":"Martin","age":69,"job":"engineer"}
+{"first_name":"Robert","last_name":"Martin","age":69,"job":"engineer","description":"Colloquially called \"Uncle Bob\", is an American software engineer, instructor, and best-selling author. He is most recognized for developing many software design principles and for being a founder of the influential Agile Manifesto. Martin has authored many books and magazine articles."}
 {"index":{"_id":103}}
-{"first_name":"Martin","last_name":"Fowler","age":58,"job":"engineer"}
+{"first_name":"Martin","last_name":"Fowler","age":58,"job":"engineer","description":"An American-resident British software developer, author and international public speaker on software development, specialising in object-oriented analysis and design, UML, patterns, and agile software development methodologies, including extreme programming."}
 {"index":{"_id":104}}
-{"first_name":"Tim","last_name":"Berners-Lee","age":67,"job":"scientist"}
+{"first_name":"Tim","last_name":"Berners-Lee","age":67,"job":"scientist","description":"An English computer scientist best known as the inventor of the World Wide Web. He is a Professorial Fellow of Computer Science at the University of Oxford and a professor at the Massachusetts Institute of Technology."}
