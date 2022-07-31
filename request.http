@@ -118,15 +118,16 @@ Content-Type: application/json
 }
 
 ###
-#@name Search by first name
+#@name Search by similar job. There is a typo in word 'engener',
 GET http://localhost:9200/persons/_search
 Content-Type: application/json
 
 {
   "query": {
     "fuzzy": {
-      "first_name": {
-        "value": "{{first_name}}"
+      "job": {
+        "value": "engener",
+        "fuzziness": "2"
       }
     }
   }
